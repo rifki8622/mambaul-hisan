@@ -194,6 +194,19 @@
   margin: 6px 0;
 }
 
+.quote-section {
+  background-color: #f1fff1;
+  color: #0d4d2d;
+  padding: 15px;
+  font-style: italic;
+  font-size: 1.05rem;
+  text-align: center;
+  border-top: 2px dashed #a5d6a7;
+  border-bottom: 2px dashed #a5d6a7;
+  margin-top: 40px;
+}
+
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -277,6 +290,10 @@
         <a href="https://wa.me/6282181018242" class="whatsapp" target="_blank">WhatsApp</a>
       </div>
     </section>
+    <section class="quote-section">
+  <p id="quote-text">"Sedang memuat kata mutiara islami..."</p>
+</section>
+
 
    <footer class="site-footer">
   <div class="footer-content">
@@ -286,9 +303,7 @@
   </div>
 </footer>
 
-
   
-
   <script>
     function startSite() {
       document.getElementById("welcome").style.display = "none";
@@ -296,5 +311,19 @@
       document.getElementById("bgMusic").play();
     }
   </script>
+    <script>
+  const quotes = [
+    "Barang siapa menempuh jalan untuk mencari ilmu, Allah mudahkan baginya jalan ke surga. (HR. Muslim)",
+    "Sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain. (HR. Ahmad)",
+    "Ilmu tanpa amal adalah sia-sia, amal tanpa ilmu adalah kesesatan. – Imam Al-Ghazali",
+    "Orang yang paling baik di antara kalian adalah yang belajar Al-Qur'an dan mengajarkannya. (HR. Bukhari)",
+    "Bersyukurlah atas hal kecil, maka Allah tambahkan nikmat besar. (QS. Ibrahim: 7)"
+  ];
+
+  const quoteText = document.getElementById("quote-text");
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  quoteText.textContent = `"${randomQuote}"`;
+</script>
+
 </body>
 </html>
